@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
+import MainPage from './components/MainPage/MainPage';
+import Error404 from './components/Error404/Error404';
+import UserLayout from './components/UserLayout/UserLayout';
+import { ThemeContext } from './components/ThemedContext';
+import { useState } from 'react';
+// import Loader from './components/Loader/Loader';
+
 
 function App() {
+ 
+  const [dark, setDark] = useState(false)
+  const toggleTheme =()=>{
+    setDark(x=>{
+      console.log(x)
+      return !x
+    })
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContext.Provider value={{dark, toggleTheme}}>
+      <Router >
+        <Switch>
+        <Route exact theme={dark} path="/">
+            <MainPage />
+        </Route>
+        <Route path="/courses">
+            <UserLayout />
+        </Route>
+        <Route path='*'>
+            <Error404 />
+        </Route>
+        </Switch>
+      </Router>
+    </ThemeContext.Provider>
+
+  
   );
 }
 

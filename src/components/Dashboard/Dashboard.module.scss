@@ -1,0 +1,85 @@
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    
+    p{
+        font-size: 20px;
+        font-weight: 700;
+
+    }
+    ul.navbar{
+        display: flex;
+        list-style: none;
+        // flex-direction: column;
+        li.nav_item{
+            &:hover{
+                cursor: pointer;
+            }
+            display: flex;
+            padding: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #768492;
+            
+        }
+        li.active{
+            $ActiveColor: #5E81F4;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            color:$ActiveColor;
+            position: relative;
+            transition: all 1s ease-in-out;
+
+            &::before{
+                content: "";
+                bottom: 0;
+                display: flex;
+                background-color: $ActiveColor;
+                position: absolute;
+                width: 20px;
+                height: 3px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+.course_section{
+    padding: 10px 0;
+    height: 90%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    .courses_list{
+        &::-webkit-scrollbar {
+            width: 8px; //media change 
+          }
+          
+          /* Track */
+          &::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+          }
+           
+          /* Handle */
+          &::-webkit-scrollbar-thumb {
+            background: rgb(137, 143, 226); 
+            border-radius: 10px;
+          }
+          
+          /* Handle on hover */
+          &::-webkit-scrollbar-thumb:hover {
+              cursor: pointer;
+            background: rgb(84, 127, 206);
+          }
+        max-height: 100%;
+        overflow-y: auto;
+        width: 100%;
+        height: min-content;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        display: flex;
+    }
+}

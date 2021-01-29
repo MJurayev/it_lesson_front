@@ -1,0 +1,76 @@
+.nav_item{
+    .nav_link{
+        $pseudoSize:40px;
+        $timing:.3s ease-in-out;
+        display:flex ;
+        align-items: center;
+        position: relative;
+        padding: 10px;
+        border-radius: 10px 0 0 10px;
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: color .5s ease-in-out;
+        &:active{
+            transition: all .5s ease-in-out;
+            color: #5840BB;
+        }
+        i{
+            display: flex;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+        &.active{
+            transition: color .5s ease-in-out;
+            color: #5840BB;
+            background-color: white;
+        }
+        &.active .after{
+            transition:border-bottom-right-radius $timing  ;
+            position: absolute;
+            width: $pseudoSize;
+            height: $pseudoSize;
+            bottom: 100%;
+            right: 0;
+            // background-color: red;
+            z-index: 2;
+            border-bottom-right-radius:50% ;
+            background-color: #5840BB;
+            // transition:$linkTransition ;
+            
+        }
+        &.active .before{
+            transition:background-color $timing ;
+
+            transition:  border-top-right-radius $timing ;
+            
+            position: absolute;
+            width: $pseudoSize;
+            height: $pseudoSize;
+            top: 100%;
+            right: 0;
+            z-index: 2;
+            border-top-right-radius:50% ;
+            background-color: #5840BB;
+        }
+        &.active .after2{
+            // transition:$linkTransition ;
+            content: '';
+            position: absolute;
+            width: $pseudoSize;
+            height: $pseudoSize;
+            bottom: 100%;
+            right: 0;
+            background-color: white;
+        }
+        &.active .before2{
+            content: '';
+            position: absolute;
+            width: $pseudoSize;
+            height: $pseudoSize;
+            top: 100%;
+            right: 0;
+            background-color: white;
+        }
+    }
+}

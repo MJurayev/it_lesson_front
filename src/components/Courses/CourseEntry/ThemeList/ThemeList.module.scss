@@ -1,0 +1,117 @@
+.themes {
+    overflow: hidden;
+    $border_radius:10px;
+    border-radius: $border_radius;
+    $transition_table:all .3s ease-in-out;
+    $border_divider:1px solid rgb(146, 161, 247);
+    // background-color: aqua;
+    flex-direction: column  ;
+    width: 100%;
+    display: flex;
+    border: 1px solid rgb(102, 125, 253);
+    .grading, .completely{
+        max-width: 200px;
+    }
+    .gradingHeader{
+        max-width: 210px;
+    }
+    .themeNumber{
+        max-width: 150px;
+    }
+    .heads{
+        font-weight: 700;
+        background-color:rgb(88, 88, 240) ;
+        color: white;
+        border-top-left-radius:$border_radius ;
+        border-top-right-radius:$border_radius ;
+        align-items: center;
+        // justify-content: space-around;
+        width: 100%;
+        display: flex;
+        transition:$transition_table ;
+        div{
+            transition:$transition_table ;
+            border-left: $border_divider;
+            // border: 1px solid red;   
+            &:first-child{
+                border-left:none ;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+            padding: 9px 20px;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            display: flex;
+        }
+        
+    }
+    .tbody{
+        position: relative;
+        $padding_row :5px 20px;
+        height: 442px; //media change
+        overflow-y: scroll;
+        .trow{
+            font-weight: 500;
+            $border_divider_body:1px solid  rgb(148, 148, 148);
+            overflow: hidden;
+            transition:$transition_table ;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            display: flex;
+            
+            &:hover{
+                
+                background-color: rgb(189, 205, 247);
+                
+            }
+            div{
+                
+                height: 100%;
+                &:nth-child(1) ,&:nth-child(3), &:nth-child(4){
+                    padding: $padding_row;
+                }
+                a{
+                    position: relative;
+                    color: black;
+                    transition:$transition_table ;
+                    display: flex;
+                    text-decoration: none;
+                    // justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    padding: $padding_row;
+                    height: 100%;
+                    &:active{
+                        color: aqua;
+                        background-color: rgb(125, 160, 235);
+                    }
+                   
+                    &:hover{
+                        color: white;
+                    }
+                    
+                }
+                &:hover{
+                    color: white;
+                    cursor: pointer;
+                    background-color:rgb(132, 167, 253);
+                }
+                transition:$transition_table ;
+                border-left: $border_divider_body;
+                &:first-child{
+                    border-left:none;
+                }
+                
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                display: flex;
+                
+            }
+            
+        }
+    }
+}
