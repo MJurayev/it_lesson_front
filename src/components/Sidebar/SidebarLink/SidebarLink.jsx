@@ -7,10 +7,6 @@ export default function SidebarLink(props) {
             <NavLink className={st.nav_link}  activeClassName={st.active} to={props.hrefTo}  >
                 <i className={props.class}></i>
                 {props.title}
-            <span className={st.before}></span>
-            <span className={st.after}></span>
-            <span className={st.after2}></span>
-            <span className={st.before2}></span>
             </NavLink>   
         </li>
     )

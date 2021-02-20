@@ -1,7 +1,7 @@
 import React from 'react'
 import st from './Sidebar.module.scss'
 import logo from '../../assets/img/Logo-dark.png'
-import user_avatar from '../../assets/img/avatar.png'
+// import user_avatar from '../../assets/img/avatar.png'
 // import { NavLink } from 'react-router-dom'
 import SidebarLink from './SidebarLink/SidebarLink'
 export default function Sidebar() {
@@ -10,10 +10,10 @@ export default function Sidebar() {
            <div className={st.avatar}>
             <img className={st.logo} src={logo} alt="" />
            </div>
-           <hr className={st.divider} />
-           <div className={st.user_avatar}>
+           {/* <hr className={st.divider} /> */}
+           {/* <div className={st.user_avatar}>
                <img className={st.user_img}  src={user_avatar} alt=""/>
-           </div>
+           </div> */}
            {/* <div ><button>Kirish</button><button>register</button> </div>
            <div ><button>Profile</button><button>My Courses</button> </div> */}
 

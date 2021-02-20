@@ -11,11 +11,9 @@ export default function ThemeList({themeStatus, courseId}) {
                         <div className= {st.themeName}>
                             Mavzu Nomi
                         </div>
-                        <div className={st.completely}>
-                            Tugallanganligi
-                        </div>
+                        
                         <div className={st.gradingHeader}>
-                            Baho
+                            Tugallanganligi
                         </div>
                     </div>
                     <div className={st.tbody}>
@@ -30,8 +28,8 @@ export default function ThemeList({themeStatus, courseId}) {
                                                     to={`${courseId}/${theme.id}`}>
                                                     {theme.themeName}
                                                 </Link></div>
-                                            <div className={st.completely}>{theme.completely}</div>
-                                        <div className={st.grading}>{theme.grade}</div>
+                                            <div className={st.completely}>{theme.grade}</div>
+                                        {/* <div className={st.grading}>{theme.grade}</div> */}
                                     </div>
                                 </>
                             )

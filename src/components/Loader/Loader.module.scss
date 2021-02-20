@@ -9,6 +9,7 @@
     $loaderWidthBox1:300px;
     $box_container:250px;
 .container{
+    z-index: 99;
     position: fixed;
     width: 100%;
     height: 100vh;

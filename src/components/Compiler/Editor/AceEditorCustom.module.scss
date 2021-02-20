@@ -1,0 +1,110 @@
+.cursor{
+    width: 2px;
+}
+.controls{
+    height: 30px;
+    background-color: rgb(66, 66, 66);
+    color: rgb(182, 182, 182);
+    display: flex;
+    padding: 5px 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    .field{
+        // display: flex;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        font-size: 17px;
+        justify-content: space-around;
+        label{
+            margin: 0 5px;
+        }
+        .select{
+            
+            margin: auto 0;
+            display: flex;
+            align-items: center;
+            // selector-parse($selector: )
+            select{
+                &:hover{
+                    cursor: pointer;
+                }
+                option{
+                    &:checked{
+                        background-color: #808080;
+                        cursor: pointer;
+                    }
+                }
+                display: flex;
+                outline: none;
+                padding: 3px;
+                color: rgb(184, 184, 184);
+                font-size: 16px;
+                border: none;
+                // border-radius: 5px;
+                background-color: rgb(83, 83, 83);
+            }
+        }
+    }
+}
+
+
+.container{
+     &:root{
+        --scrollRadius:0px;
+        --widthScroll:10px;
+      }
+      & ::-webkit-scrollbar {
+        width:var(--widthScroll); 
+        height: var(--widthScroll);
+      }
+      /* Track */
+      & ::-webkit-scrollbar-track {
+        background: #5a5a5a; 
+        border-radius: 0;
+      }
+        
+      /* Handle */
+      & ::-webkit-scrollbar-thumb {
+        background:#8a8a8a; 
+        border-radius:0;
+      }
+      
+      /* Handle on hover */
+     & ::-webkit-scrollbar-thumb:hover {
+          cursor: pointer;
+        background: rgb(114, 113, 113)
+      }
+    position: absolute;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    .editor{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        
+            
+        
+    }
+    .result{
+        border-left: 1px solid rgb(119, 119, 119);
+        display: flex;
+        width: 50%;
+        // background-color: rgb(129, 129, 129);
+        height: 100%;
+        flex-direction: column;
+        .display{
+            user-select: none;
+            padding: 5px;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-color: #1f1f1f;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+        }
+    }
+}
