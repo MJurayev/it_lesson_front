@@ -1,6 +1,6 @@
 .themes {
     overflow: hidden;
-    $border_radius:10px;
+    $border_radius:3px;
     border-radius: $border_radius;
     $transition_table:all .3s ease-in-out;
     $border_divider:1px solid rgb(146, 161, 247);
@@ -63,9 +63,7 @@
             display: flex;
             
             &:hover{
-                
-                background-color: rgb(189, 205, 247);
-                
+                background-color: rgb(189, 189, 189);
             }
             div{
                 
@@ -97,7 +95,7 @@
                 &:hover{
                     color: white;
                     cursor: pointer;
-                    background-color:rgb(132, 167, 253);
+                    background-color:rgb(192, 192, 192);
                 }
                 transition:$transition_table ;
                 border-left: $border_divider_body;

@@ -7,8 +7,8 @@ export default function CoursesAll({onFavourite,onLeave, courses}) {
            <div className={st.course_top}>
                <h2>All courses</h2>
                <ul className={st.course_types}>
-                <li className={st.nav_items}>Free</li>
-                <li className={st.nav_items +" "+ st.active}>Premium</li>
+                <li className={st.nav_items+" "+ st.active}>Free</li>
+                <li className={st.nav_items }>Premium</li>
                 <li className={st.nav_items}>Top</li>
                 </ul>
             </div>
