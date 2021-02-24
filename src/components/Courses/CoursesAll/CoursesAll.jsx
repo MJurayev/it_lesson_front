@@ -1,6 +1,6 @@
 
 import  st from './CourseAll.module.scss'
-import CoursesListComponent from '../CoursesListComponent/CoursesListComponent'
+import CoursesListComponent from '../../features/CoursesListComponent/CoursesListComponent'
 export default function CoursesAll({onFavourite,onLeave, courses}) {
     return (
         <div className={st.course_container}>

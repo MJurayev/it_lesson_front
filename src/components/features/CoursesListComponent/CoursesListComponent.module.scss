@@ -1,0 +1,43 @@
+
+   .wrap{
+       width: 100%;
+       padding:0 30px;
+       position: relative;
+       display: flex;
+       .controls{
+        position: absolute;
+        width:100% ;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+        height:100%;
+        display: flex;
+        justify-content: space-between;
+        span{
+            padding:10px;
+            cursor: pointer;
+        }
+    }
+   }
+   
+        .container{
+            // padding:0 40px;
+            position: relative;
+            box-sizing: initial;
+            overflow: hidden;
+            width: 3* 400px;
+            margin:0 auto;    
+            // display: flex;
+    
+            .courses_list{
+                margin: 0 auto;
+                display: inline-block;
+                overflow: hidden;
+                // position: relative;
+                height: min-content;
+                width: max-content;
+                transform: translateX(0);
+                
+                // width: 100%;
+            }
+        }

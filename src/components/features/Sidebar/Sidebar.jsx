@@ -1,6 +1,6 @@
 import React from 'react'
 import st from './Sidebar.module.scss'
-import logo from '../../assets/img/Logo-dark.png'
+import logo from '../../../assets/img/Logo-dark.png'
 // import user_avatar from '../../assets/img/avatar.png'
 // import { NavLink } from 'react-router-dom'
 import SidebarLink from './SidebarLink/SidebarLink'

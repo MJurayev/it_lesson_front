@@ -12,7 +12,7 @@ export default function Compiler() {
     }
     
     return (
-        <div>
+        <div className={st.container}>
             <AceEditorCustom onLoad={onLoad} onChange={onChange} />
         </div>
     )

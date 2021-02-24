@@ -12,11 +12,11 @@
     z-index: 3;
     
     .avatar{
-        margin-top: -10px;
+        margin-top: 10px;
         position: relative;
         display: flex;
         width: 90%;
-        justify-content: center;
+        align-items: center;
         // border: .2px solid white;
         overflow: hidden;
         border-radius: 10px;
