@@ -1,6 +1,5 @@
-import {useRef,useLocation} from 'react'
 import st from './CourseEntry.module.scss'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import ThemeList from './ThemeList/ThemeList';
 
 export default function CourseEntry() {
@@ -39,9 +38,6 @@ export default function CourseEntry() {
                 <div className={st.title}>
                     <div>C++ dasturlash asoslari va algorithmlash asoslari ma'lumotlar tuzilmasi</div>
                 </div>
-                {/* <div className={st.description}>
-                    <div>Mundarija</div>    
-                </div> */}
                 <ThemeList themeStatus={themeStatus} courseId ={course_id} />
             </div>
            

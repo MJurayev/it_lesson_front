@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import CourseItem from '../Courses/Course-item/CourseItem'
-import CoursesListComponent from '../Courses/CoursesListComponent/CoursesListComponent'
+import CoursesListComponent from '../features/CoursesListComponent/CoursesListComponent'
 import st from './Dashboard.module.scss'
 
 export default function Dashboard({courses, onLeave , onFavourite}) {

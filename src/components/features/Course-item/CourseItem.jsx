@@ -1,14 +1,13 @@
 import st from './CourseItem.module.scss'
-import { Link, useLocation } from 'react-router-dom'
-export default function CourseItem({Course,onLeave, onFavourite}) {
-    const    location = useLocation()
+import { Link } from 'react-router-dom'
+export default function CourseItem({Course,onLeave, onFavourite, refItem}) {
     const hiddenStyle = {
         visibility:Course.joined ? '' : 'hidden',
         opacity:Course.joined ? 1 :0,
         transition: "all .4s ease-in-out"
     }
     return (
-        <div  className={st.container}>
+        <div ref={refItem} className={st.container}>
             <div className={st.courseBox}>
                 <div className={st.see_course}>
                     <Link to={`/courses/courses/${Course.id}`} className={st.btn}>See course</Link>
@@ -19,6 +18,7 @@ export default function CourseItem({Course,onLeave, onFavourite}) {
                 <img src={Course.walls} className={st.bg} alt={Course.title}/>
 
             </div>
+            <div className={st.title}>{Course.title}</div>
         </div>
     )
 }
